@@ -31,6 +31,7 @@ with input_features:
 	t3 = st.slider('Please enter the patient´s T3 levels (nmol/L)', 0.0, 11.0, 0.05)
 	fti = st.slider('Please enter the patient´s FTI levels (nmol/L)', 0.0, 400.0, 0.5)
 
+
 def thyroid_disease_predictor(sex, on_thyroxine, on_antithyroid_medication, pregnant, goitre, tsh, t3, fti):
     try:
         values = []
@@ -56,11 +57,25 @@ def thyroid_disease_predictor(sex, on_thyroxine, on_antithyroid_medication, preg
     except:
         return "Opps, sorry, something went wrong. Please enter values again."
 
+result = None 
+
+c1 = st.container()
+with c1:
+
+    col1, col2, col3 = st.columns(3)
+
+    with col2:
+
+        if st.button('Predict the patient´s state 🩺'):
+            result = thyroid_disease_predictor(sex, on_thyroxine, on_antithyroid_medication, pregnant, goitre, tsh, t3, fti)
 
 
-if st.button('Predict patients state'):
-	result = thyroid_disease_predictor(sex, on_thyroxine, on_antithyroid_medication, pregnant, goitre, tsh, t3, fti)
-	st.write(result)
+c2 = st.container()     
+with c2:
+    st.write(" ")
+    if result is not None:
+        st.write(result)
+
 
 
 

@@ -7,7 +7,7 @@ st.sidebar.success(" ")
 
 with header:
     st.title("Hypothyroidism Disease Predictor")
-    st.subheader("Identify patients suffering from hypothyroidism disease by imputing 8 simple values!")
+    st.subheader("Identify patients suffering from hypothyroidism by imputing 8 simple values!")
 
 c1 = st.container()
 with c1:

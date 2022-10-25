@@ -12,7 +12,7 @@ with body:
     st.write(" ")
     st.write(" ")
     st.write("Data source: https://archive.ics.uci.edu/ml/datasets/thyroid+disease")
-    st.write("From 29 initial features, 8 were chosen for disease prediction: sex, whether the patient is on thyroxine medication, whether the patient is on antithyroid medication, whether the patient is pregnant, whether the patient suffers from goiter, TSH, T3 and FTI levels")
+    st.write("From 29 initial features, 5 were chosen for disease prediction: sex, whether the patient is on thyroxine medication, TSH, T3 and FTI levels")
     st.write(" ")
     st.write(" ")
     st.write("The following parameters were chosen for the random forest model:")
